@@ -64,7 +64,7 @@ def crawl(article=None, callback=None):
 
     """
 
-    if article is None:
+    if article is None or article.strip() == '':
         article = wikipedia.random()
 
     visited_articles = list()

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crawler Results</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+</head>
+<body class="align">
+<div class="grid">
+
+  <h2> Results for </h2> {% csrf_token %}
+
+    <div>
+        <ol>
+            {% for article in articles %}
+            <li>
+                {{ article }}
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+
+</body>
+</html>

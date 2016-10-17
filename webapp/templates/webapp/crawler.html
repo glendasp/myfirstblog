@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRAWLER</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+</head>
+<body class="align">
+<div class="grid">
+
+  <h1>Wikipedia Philosophy Crawler</h1><hr>
+
+      <h2> Search for articles:</h2>
+
+      <form class="search" action="results" method="post">
+          <div class="form__field">
+            {% csrf_token %}
+            <input class="form__input" type="search" name="search"
+            placeholder="Type the article name here" required="required">
+            <input type="submit" value="Search" class="button">
+          </div>
+      </form><hr>
+      <a href="about.html">About this project </a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRAWLER</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+</head>
+<body class="align">
+<div class="grid">
+
+  <h1>Wikipedia Philosophy Crawler</h1>
+  <h3>
+    Crawls through Wikipedia articles until it reaches Philosophy.
+  </h3>
+  <hr>
+
+      <div>
+          <h2> Team: </h2>
+          <p><a href="https://github.com/glendasp"> &#45; &#62; Glenda Pinho</a></p>
+          <p><a href="https://github.com/masonelmore"> &#45; &#62; Mason Elmore</a></p>
+          <p><a href="https://github.com/TimmyMill"> &#45; &#62; Timothy Milligan</a></p>
+          <p><a href="https://github.com/zz3430gs"> &#45; &#62; Joe Lee</a></p>
+      </div>
+      <div>
+
+          <h2>Summary:</h2>
+          <pre>
+            Our program uses the Wikipedia API to crawl through articles until
+            it reaches Philosophy.  It starts at a random article, follows the
+            first link in the main text, and keeps doing that for each subsequent
+            article until it gets stuck in a loop or reaches Philosophy.
+          </pre>
+      </div><hr>
+      <a href="webapp/crawler.html"> Home </a>
+</div>
+
+</body>
+</html>
